@@ -39,6 +39,13 @@
         let count = 0;
         const countSpan = document.getElementById('count');
 
+        function initializeCount() {
+            if (localStorage.getItem('resinCount')) {
+                count = parseInt(localStorage.getItem('resinCount'), 10);
+            }
+            updateCounter();
+        }
+        
         function naturalRegen() 
         {
             
@@ -90,6 +97,11 @@
             countSpan.textContent = count;
         }
 
+        function saveCountToLocalStorage() 
+        {
+            localStorage.setItem('resinCount', count);
+        }
+        initializeCount();
         naturalRegen();
     </script>
 </body>
