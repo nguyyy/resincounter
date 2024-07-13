@@ -27,10 +27,11 @@
             <p>Count: <span id="count">0</span></p>
         </div>
         <div>
-            <button onclick="incrementCounter()">Increment</button>
-            <button onclick="decrementCounter()">Decrement</button>
-            <button onclick="resetCounter()">Reset</button>
-            <button onclick="doubleCounter()">Double</button>
+            <button onclick="useFragile()">Use Fragile Resin</button>
+            <button onclick="minus20()">-20 Resin</button>
+            <button onclick="minus40()">-40 Resin</button>
+            <button onclick="changeResin(200)">Set Resin</button>
+            <input type="number" name="someid" />
         </div>
     </div>
 
@@ -38,23 +39,23 @@
         let count = 0;
         const countSpan = document.getElementById('count');
 
-        function incrementCounter() {
-            count++;
+        function useFragile() {
+            count += 40;
             updateCounter();
         }
 
-        function decrementCounter() {
-            count--;
+        function minus20() {
+            count -= 20;
             updateCounter();
         }
 
-        function resetCounter() {
-            count = 0;
+        function minus40() {
+            count -= 40;
             updateCounter();
         }
 
-        function doubleCounter() {
-            count *= 2;
+        function changeResin(int newCount) {
+            count = newCount;
             updateCounter();
         }
 
