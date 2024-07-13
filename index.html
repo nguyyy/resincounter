@@ -41,8 +41,12 @@
 
         function naturalRegen() 
         {
+            
             setInterval(function() {
-                count++;
+                if(count < 200)
+                {
+                    count++;
+                }
                 updateCounter();
             }, 8 * 60 * 1000);
         }
@@ -85,6 +89,8 @@
         {
             countSpan.textContent = count;
         }
+
+        naturalRegen();
     </script>
 </body>
 </html>
