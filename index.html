@@ -39,35 +39,50 @@
         let count = 0;
         const countSpan = document.getElementById('count');
 
-        function useFragile() {
+        function naturalRegen() 
+        {
+            setInterval(function() {
+                count++;
+                updateCounter();
+            }, 8 * 60 * 1000);
+        }
+        
+        function useFragile() 
+        {
             count += 40;
             updateCounter();
         }
 
-        function minus20() {
+        function minus20() 
+        {
             count -= 20;
             updateCounter();
         }
 
-        function minus40() {
+        function minus40()
+        {
             count -= 40;
             updateCounter();
         }
 
-        function changeResin(newCount) {
+        function changeResin(newCount)
+            {
             count = newCount;
             updateCounter();
         }
 
-        function changeResinFromInput() {
+        function changeResinFromInput() 
+        {
             const newCount = parseInt(document.getElementById('newResin').value, 10);
-            if (!isNaN(newCount)) {
+            if (!isNaN(newCount))
+            {
                 count = newCount;
                 updateCounter();
             }
         }
 
-        function updateCounter() {
+        function updateCounter() 
+        {
             countSpan.textContent = count;
         }
     </script>
