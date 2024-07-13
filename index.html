@@ -31,7 +31,8 @@
             <button onclick="minus20()">-20 Resin</button>
             <button onclick="minus40()">-40 Resin</button>
             <button onclick="changeResin(200)">Set Resin</button>
-            <input type="number" name="someid" />
+            <input type="number" id="newResin" placeholder="Enter new resin">
+            <button onclick="changeResinFromInput()">Set Resin from Input</button>
         </div>
     </div>
 
@@ -54,9 +55,17 @@
             updateCounter();
         }
 
-        function changeResin(int newCount) {
+        function changeResin(newCount) {
             count = newCount;
             updateCounter();
+        }
+
+        function changeResinFromInput() {
+            const newCount = parseInt(document.getElementById('newResin').value, 10);
+            if (!isNaN(newCount)) {
+                count = newCount;
+                updateCounter();
+            }
         }
 
         function updateCounter() {
