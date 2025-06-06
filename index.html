@@ -48,22 +48,34 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 2rem;
       padding: 2rem;
-      max-width: 1200px;
+      max-width: 1400px;
+    }
+    .video-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .video-card {
+      width: 100%;
+      height: 300px;
       border: 2px solid #476fff;
       border-radius: 8px;
-      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
     .video-card:hover {
       background-color: rgba(71, 111, 255, 0.1);
+    }
+    .caption {
+      margin-top: 0.5rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #333;
     }
     .contact-dropdown {
       position: relative;
@@ -100,15 +112,42 @@
   </header>
   <main>
     <div class="grid">
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
-      <div class="video-card">▶</div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 1</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 2</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 3</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 4</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 5</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 6</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 7</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 8</div>
+      </div>
+      <div class="video-wrapper">
+        <div class="video-card">▶</div>
+        <div class="caption">Video Title 9</div>
+      </div>
     </div>
   </main>
 </body>
