@@ -11,12 +11,11 @@
       padding: 0;
     }
     body {
-  background: linear-gradient(135deg, #ffffff, #dce8ff, #ffffff, #dce8ff);
-  background-attachment: fixed;
-  color: #000;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
+      background: linear-gradient(135deg, #ffffff, #dce8ff, #ffffff, #dce8ff);
+      background-attachment: fixed;
+      color: #000;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
     header {
       position: sticky;
       top: 0;
@@ -29,6 +28,9 @@
       align-items: center;
       z-index: 10;
       border-bottom: 1px solid #476fff;
+    }
+    header nav {
+      position: relative;
     }
     header nav a {
       color: black;
@@ -62,21 +64,22 @@
     .video-card {
       width: 100%;
       aspect-ratio: 16 / 9;
-      border: 2px solid #476fff;
-      border-radius: 8px;
+      max-height: 400px;
+      border: 3px solid #476fff;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
     .video-card:hover {
       background-color: rgba(71, 111, 255, 0.1);
     }
     .caption {
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
       text-align: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #333;
     }
     .contact-dropdown {
@@ -86,12 +89,16 @@
     .dropdown-content {
       display: none;
       position: absolute;
+      right: 0;
+      top: 100%;
       background-color: #eee;
       color: black;
-      min-width: 160px;
+      min-width: 200px;
       border: 1px solid #476fff;
       z-index: 20;
       padding: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      white-space: nowrap;
     }
     .contact-dropdown:hover .dropdown-content {
       display: block;
