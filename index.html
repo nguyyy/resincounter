@@ -11,8 +11,8 @@
       padding: 0;
     }
     body {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       font-family: Arial, sans-serif;
     }
     header {
@@ -21,7 +21,7 @@
       width: 100%;
       padding: 1rem 2rem;
       backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(255, 255, 255, 0.6);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -29,7 +29,7 @@
       border-bottom: 1px solid #00f7ff;
     }
     header nav a {
-      color: white;
+      color: black;
       margin: 0 1rem;
       text-decoration: none;
       border-bottom: 2px solid transparent;
@@ -41,11 +41,16 @@
       font-size: 2rem;
       font-weight: bold;
     }
+    main {
+      display: flex;
+      justify-content: center;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
       padding: 2rem;
+      max-width: 1000px;
     }
     .video-card {
       border: 2px solid #00f7ff;
@@ -66,7 +71,8 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #111;
+      background-color: #eee;
+      color: black;
       min-width: 160px;
       border: 1px solid #00f7ff;
       z-index: 20;
@@ -91,16 +97,18 @@
       </div>
     </nav>
   </header>
-  <main class="grid">
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
-    <div class="video-card">▶</div>
+  <main>
+    <div class="grid">
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+      <div class="video-card">▶</div>
+    </div>
   </main>
 </body>
 </html>
