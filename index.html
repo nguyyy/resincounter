@@ -1,108 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resin Counter</title>
-    <style>
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .counter {
-            font-size: 24px;
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 16px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fy</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      border-bottom: 1px solid #00f7ff;
+    }
+    header nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+    header nav a:hover {
+      border-color: #00f7ff;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .video-card {
+      border: 2px solid #00f7ff;
+      border-radius: 8px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .video-card:hover {
+      background-color: rgba(0, 247, 255, 0.1);
+    }
+    .contact-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #111;
+      min-width: 160px;
+      border: 1px solid #00f7ff;
+      z-index: 20;
+      padding: 0.5rem;
+    }
+    .contact-dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Resin Counter</h1>
-        <div class="counter">
-            <p>Count: <span id="count">0</span></p>
+  <header>
+    <div class="logo">fy</div>
+    <nav>
+      <a href="#">g'lyss</a>
+      <div class="contact-dropdown">
+        <a href="#">Contact</a>
+        <div class="dropdown-content">
+          <p>Email: yourname@email.com</p>
+          <p>Phone: 123-456-7890</p>
         </div>
-        <div>
-            <button onclick="useFragile()">Use Fragile Resin</button>
-            <button onclick="minus20()">-20 Resin</button>
-            <button onclick="minus40()">-40 Resin</button>
-            <input type="number" id="newResin" placeholder="Enter new resin">
-            <button onclick="changeResinFromInput()">Set Resin:</button>
-        </div>
-    </div>
-
-    <script>
-        let count = 0;
-        const countSpan = document.getElementById('count');
-
-        function initializeCount() {
-            if (localStorage.getItem('resinCount')) {
-                count = parseInt(localStorage.getItem('resinCount'), 10);
-            }
-            updateCounter();
-        }
-        
-        function naturalRegen() 
-        {
-            
-            setInterval(function() {
-                if(count < 200)
-                {
-                    count++;
-                }
-                updateCounter();
-            }, 8 * 60 * 1000);
-        }
-        
-        function useFragile() 
-        {
-            count += 60;
-            updateCounter();
-        }
-
-        function minus20() 
-        {
-            count -= 20;
-            updateCounter();
-        }
-
-        function minus40()
-        {
-            count -= 40;
-            updateCounter();
-        }
-
-        function changeResin(newCount)
-            {
-            count = newCount;
-            updateCounter();
-        }
-
-        function changeResinFromInput() 
-        {
-            const newCount = parseInt(document.getElementById('newResin').value, 10);
-            if (!isNaN(newCount))
-            {
-                count = newCount;
-                updateCounter();
-            }
-        }
-
-        function updateCounter() 
-        {
-            countSpan.textContent = count;
-        }
-
-        function saveCountToLocalStorage() 
-        {
-            localStorage.setItem('resinCount', count);
-        }
-        initializeCount();
-        naturalRegen();
-    </script>
+      </div>
+    </nav>
+  </header>
+  <main class="grid">
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+    <div class="video-card">▶</div>
+  </main>
 </body>
 </html>
